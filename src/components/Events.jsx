@@ -91,18 +91,18 @@ const Events = () => {
   }, []);
 
   return (
-    <section id="events" className="min-h-[100dvh] py-8 md:py-24 px-4 bg-primary-900 relative overflow-hidden flex flex-col justify-center">
+    <section id="events" className="py-12 md:py-24 md:min-h-[100dvh] px-4 bg-primary-900 relative overflow-hidden flex flex-col justify-center">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-600 rounded-full blur-[200px] opacity-10 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10 w-full">
-        <div className="text-center mb-8 md:mb-16">
+        <div className="text-center mb-6 md:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-script text-4xl md:text-7xl text-gold-400 mb-6 md:mb-8 drop-shadow-md"
+            className="font-script text-4xl md:text-7xl text-gold-400 mb-4 md:mb-8 drop-shadow-md"
           >
             Wedding Events
           </motion.h2>
