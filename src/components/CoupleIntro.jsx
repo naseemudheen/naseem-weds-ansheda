@@ -53,12 +53,11 @@ const CoupleIntro = () => {
                   background: 'linear-gradient(135deg, rgba(212,175,55,0.7), rgba(180,140,30,0.2), rgba(212,175,55,0.7))'
                 }}
               >
-                <div className="rounded-2xl overflow-hidden w-full md:h-full">
+                <div className="rounded-2xl overflow-hidden w-full md:h-full bg-black/10">
                   <img
                     src="/couple.jpeg"
                     alt="Raeesudheen & Shahida"
-                    className="w-full block md:!h-full md:!object-contain md:!object-center"
-                    style={{ height: 'min(38svh, 340px)', objectFit: 'cover', objectPosition: 'top' }}
+                    className="w-full h-auto max-h-[55vh] object-cover object-bottom md:!h-full md:!object-contain md:!object-center block"
                   />
                 </div>
               </motion.div>
