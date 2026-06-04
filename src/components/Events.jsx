@@ -91,7 +91,7 @@ const Events = () => {
   }, []);
 
   return (
-    <section id="events" className="py-12 md:py-24 md:min-h-[100dvh] px-4 bg-primary-900 relative overflow-hidden flex flex-col justify-center">
+    <section id="events" className="py-12 md:py-24 md:min-h-[100dvh] px-4 bg-gradient-to-b from-dark-bg to-primary-900 relative overflow-hidden flex flex-col justify-center">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-600 rounded-full blur-[200px] opacity-10 pointer-events-none"></div>

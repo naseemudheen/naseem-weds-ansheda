@@ -45,7 +45,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-primary-900 pt-4 md:pt-12">
+    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-gradient-to-b from-dark-bg to-primary-900 pt-4 md:pt-12">
       {/* Background Texture Overlay */}
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/floral-pattern.png")' }}></div>
       

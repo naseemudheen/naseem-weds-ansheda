@@ -8,7 +8,7 @@ const CoupleIntro = () => {
   };
 
   return (
-    <section id="couple" className="py-6 md:py-24 px-4 bg-dark-bg relative">
+    <section id="couple" className="py-6 md:py-24 px-4 bg-gradient-to-b from-primary-900 to-dark-bg relative">
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
 
       <div className="max-w-5xl mx-auto relative z-10">
