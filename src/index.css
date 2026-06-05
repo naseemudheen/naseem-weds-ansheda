@@ -10,7 +10,7 @@
   --color-gold-light: #f4e8d1;
   --color-cream-100: #faf7f2;
   --color-cream-200: #f0e9df;
-  --color-dark-bg: #14080e;
+  --color-dark-bg: #381a26;
 
   --font-sans: "Lato", sans-serif;
   --font-serif: "Playfair Display", serif;
@@ -38,7 +38,7 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #14080e; 
+  background: #381a26; 
 }
 ::-webkit-scrollbar-thumb {
   background: #4a1525; 
