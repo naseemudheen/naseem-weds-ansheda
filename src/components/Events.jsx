@@ -9,13 +9,16 @@ const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, d
     viewport={{ once: true }}
     whileHover={{ y: -6, transition: { duration: 0.3 } }}
     transition={{ duration: 0.8, delay }}
-    className="flex-1 w-full glass-card rounded-2xl p-6 md:p-10 border-t-4 border-t-gold-400 relative overflow-hidden group hover:border-gold-500 transition-colors hover:shadow-[0_20px_40px_rgba(168,125,43,0.12)]"
+    className="flex-1 w-full glass-card rounded-2xl p-6 md:p-10 border-t-4 border-t-gold-400 relative overflow-hidden group hover:border-gold-500 transition-colors hover:shadow-[0_20px_40px_rgba(168,125,43,0.12)] text-center md:text-left"
   >
     <div className="absolute top-0 right-0 w-32 h-32 bg-gold-400 rounded-full blur-[80px] opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity"></div>
     
-    <h3 className="font-script text-3xl md:text-5xl text-gold-500 mb-6 md:mb-8 text-center md:text-left">{title}</h3>
+    <div className="flex flex-col items-center md:items-start mb-6 md:mb-8">
+      <h3 className="font-script text-3xl md:text-5xl text-gold-500 mb-2">{title}</h3>
+      <p className="font-serif italic text-xs md:text-sm text-gold-600">The ceremony will be followed by a feast reception</p>
+    </div>
 
-    <div className="space-y-4 md:space-y-6">
+    <div className="space-y-4 md:space-y-6 text-left">
       <div className="flex items-center gap-3 md:gap-4 text-cream-200">
         <div className="w-10 h-10 md:w-12 md:h-12 shrink-0 rounded-full bg-primary-800 flex items-center justify-center border border-gold-400/30">
           <Calendar className="text-gold-500" size={20} />
@@ -23,6 +26,7 @@ const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, d
         <div>
           <p className="text-[10px] text-gold-600 uppercase tracking-widest font-semibold">Date</p>
           <p className="font-serif text-base md:text-lg text-cream-100 font-semibold">{date}</p>
+          <p className="text-[11px] text-gold-600/80 font-serif italic">4 Rajab 1448 AH</p>
         </div>
       </div>
       
@@ -48,8 +52,15 @@ const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, d
       </div>
     </div>
 
+    {/* Insha Allah blessing */}
+    <div className="text-center my-6">
+      <p className="font-serif text-xl md:text-2xl text-gold-500 font-medium" dir="rtl">
+        إِنْ شَاءَ اللّٰهُ
+      </p>
+    </div>
+
     {/* Action Buttons: Add to Google Calendar & View Location */}
-    <div className="mt-8 flex flex-col sm:flex-row gap-3">
+    <div className="mt-4 flex flex-col sm:flex-row gap-3">
       <motion.a
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
@@ -115,7 +126,6 @@ const Events = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Google Calendar event URL parameters (Times in UTC: 11:00 AM - 3:00 PM IST is 05:30 - 09:30 UTC)
   const calendarEventUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
     'Naseemudheen weds Ansheda - Wedding Reception'
   )}&dates=20261213T053000Z/20261213T093000Z&details=${encodeURIComponent(
@@ -125,7 +135,7 @@ const Events = () => {
   return (
     <section id="events" className="py-12 md:py-24 md:min-h-[100dvh] px-4 bg-gradient-to-b from-dark-bg to-primary-900 relative overflow-hidden flex flex-col justify-center">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] pointer-events-none"></div>
+      <div className="absolute inset-0 opacity-15 bg-arabesque-tile pointer-events-none"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-400 rounded-full blur-[220px] opacity-10 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10 w-full">

@@ -11,7 +11,6 @@ const Hero = () => {
     audioRef.current = new Audio('/ishq_hai.mp3');
     audioRef.current.loop = true;
     
-    // Auto play policy might block this, so we handle it gracefully
     const attemptPlay = async () => {
       try {
         await audioRef.current.play();
@@ -21,10 +20,7 @@ const Hero = () => {
       }
     };
     
-    // Attempt to auto-play immediately on load
     attemptPlay();
-    
-    // Keep the click listener as a fallback in case the browser blocks autoplay
     document.addEventListener('click', attemptPlay, { once: true });
     
     return () => {
@@ -45,9 +41,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-gradient-to-b from-dark-bg to-primary-900 pt-4 md:pt-12">
-      {/* Background Texture Overlay */}
-      <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/floral-pattern.png")' }}></div>
+    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-gradient-to-b from-dark-bg to-primary-900 pt-6 md:pt-12">
+      {/* Background Texture Overlay: Arabesque Gold Ring Watermark */}
+      <div className="absolute inset-0 opacity-20 bg-arabesque-tile pointer-events-none"></div>
       
       {/* Soft gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary-900/40 via-transparent to-primary-900 z-0"></div>
@@ -77,28 +73,54 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-4 w-full mx-auto flex flex-col items-center justify-center flex-1 mt-1 mb-2 md:my-8">
+      <div className="relative z-10 text-center px-4 w-full mx-auto flex flex-col items-center justify-center flex-1 mt-1 mb-2 md:my-6">
+        
+        {/* FIRST PLACE / FIRST STRING: Arabic Bismillahir Rahmanir Rahim */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, delay: 0.2 }}
+          className="flex flex-col items-center mb-2"
+        >
+          <img
+            src="/bismillah.png"
+            alt="بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ"
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_1px_3px_rgba(168,125,43,0.3)] brightness-90 hover:brightness-100 transition-all"
+          />
+          <p className="font-serif italic text-gold-600 text-xs sm:text-sm md:text-base tracking-wide mt-1">
+            With Allah&rsquo;s blessings and grace
+          </p>
+
+          {/* Ornate Divider (inspired by shibin-sabeeha invite) */}
+          <div className="w-48 sm:w-60 md:w-72 my-2 text-gold-500">
+            <svg viewBox="0 0 280 28" className="w-full h-auto fill-current">
+              <g fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+                <path d="M30 14 H120"/>
+                <path d="M160 14 H250"/>
+              </g>
+              <g fill="currentColor">
+                <path d="M120 14 C 128 7, 137 7, 140 14 C 137 21, 128 21, 120 14 Z"/>
+                <path d="M160 14 C 152 7, 143 7, 140 14 C 143 21, 152 21, 160 14 Z"/>
+                <path d="M140 5 L145 14 L140 23 L135 14 Z"/>
+                <circle cx="20" cy="14" r="2.2"/>
+                <circle cx="260" cy="14" r="2.2"/>
+              </g>
+            </svg>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mb-4 md:mb-8 flex flex-col items-center"
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mb-2 md:mb-4 flex flex-col items-center"
         >
-          <Logo size="md" className="mb-3 md:mb-5" />
-          <p
-            style={{
-              fontFamily: '"Great Vibes", "Dancing Script", cursive',
-              fontSize: 'clamp(1.1rem, 3.5vw, 1.5rem)',
-              color: '#8f6516',
-              textShadow: '0 1px 8px rgba(168,125,43,0.15)',
-              lineHeight: 1.6,
-            }}
-            className="mb-2"
-          >
-            In the name of Allah, the most Gracious and most Merciful
-          </p>
-          <p className="font-serif text-gold-500 uppercase tracking-[0.2em] text-sm md:text-base font-medium">
+          <Logo size="md" className="mb-2 md:mb-3" />
+          <p className="font-serif text-gold-600 uppercase tracking-[0.25em] text-xs md:text-sm font-semibold">
             Together with our families
+          </p>
+          <p className="font-serif italic text-cream-200/90 text-xs sm:text-sm md:text-base mt-0.5">
+            request the pleasure of your company to celebrate the wedding union of
           </p>
         </motion.div>
 
@@ -106,19 +128,19 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 1 }}
-          className="my-4 md:my-8 flex flex-col items-center"
+          className="my-3 md:my-6 flex flex-col items-center"
         >
           <motion.h1 
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="font-script text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-gradient-gold mb-2 md:mb-4 drop-shadow-sm pb-2 px-4"
+            className="font-script text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-gradient-gold mb-1 md:mb-3 drop-shadow-sm pb-2 px-4"
           >
             Naseemudheen
           </motion.h1>
           <motion.p 
             animate={{ scale: [1, 1.1, 1], opacity: [0.85, 1, 0.85] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="font-script text-3xl sm:text-4xl md:text-5xl text-gold-500 my-2 md:my-4"
+            className="font-script text-3xl sm:text-4xl md:text-5xl text-gold-500 my-1 md:my-3"
           >
             &amp;
           </motion.p>
@@ -135,10 +157,10 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.8 }}
-          className="mt-6 md:mt-12"
+          className="mt-4 md:mt-8"
         >
           <p className="font-serif text-cream-200/90 max-w-xl mx-auto text-sm md:text-base leading-relaxed italic">
-            "With joyous hearts, we invite you to celebrate the union of our hearts and lives."
+            &ldquo;With joyous hearts, we invite you to celebrate the union of our hearts and lives.&rdquo;
           </p>
         </motion.div>
       </div>

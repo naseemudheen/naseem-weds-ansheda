@@ -4,6 +4,9 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <footer id="footer" className="py-20 px-4 bg-primary-900 relative border-t border-gold-400/20 text-center overflow-hidden">
+      {/* Background Texture Overlay */}
+      <div className="absolute inset-0 opacity-15 bg-arabesque-tile pointer-events-none"></div>
+
       {/* Decorative top border */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent"></div>
       
@@ -17,15 +20,20 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <Logo size="sm" className="mb-8" />
+          <Logo size="sm" className="mb-6" />
 
-          <h2 className="font-script text-4xl md:text-5xl text-cream-100 mb-6">Thank You</h2>
+          <h2 className="font-script text-4xl md:text-5xl text-cream-100 mb-4">Thank You</h2>
           
-          <p className="font-serif text-cream-200/90 mb-12 italic text-lg">
-            We look forward to celebrating with you!
+          <p className="font-serif text-cream-200/90 mb-3 italic text-lg md:text-xl">
+            Your duas &amp; presence mean a lot to us
           </p>
 
-          <div className="flex items-center justify-center gap-4 mb-12">
+          <p className="font-serif italic text-gold-600/90 text-sm md:text-base mb-8">
+            With love,<br />
+            The families of Naseemudheen &amp; Ansheda
+          </p>
+
+          <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-16 bg-gold-400/50"></div>
             <motion.span 
               animate={{ scale: [1, 1.3, 1] }} 
@@ -38,7 +46,7 @@ const Footer = () => {
           </div>
 
           <p className="text-xs text-gold-600/70 uppercase tracking-[0.3em] font-sans font-medium">
-            Naseemudheen & Ansheda &copy; 2026
+            Naseemudheen &amp; Ansheda &copy; 2026
           </p>
         </motion.div>
       </div>
