@@ -43,7 +43,7 @@ const CoupleIntro = () => {
               
               {/* Header: Name & Role */}
               <div className="flex flex-col items-center w-full">
-                <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold mb-2 leading-tight">
+                <h3 className="font-script text-5xl sm:text-6xl md:text-7xl text-gradient-gold mb-2 leading-tight">
                   Naseemudheen
                 </h3>
                 <span className="inline-block px-3.5 py-0.5 bg-primary-800/80 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-semibold mb-3">
@@ -117,7 +117,7 @@ const CoupleIntro = () => {
 
               {/* Header: Name & Role */}
               <div className="flex flex-col items-center w-full">
-                <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold mb-2 leading-tight">
+                <h3 className="font-script text-5xl sm:text-6xl md:text-7xl text-gradient-gold mb-2 leading-tight">
                   Ansheda
                 </h3>
                 <span className="inline-block px-3.5 py-0.5 bg-primary-800/80 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-semibold mb-3">

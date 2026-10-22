@@ -133,21 +133,21 @@ const Hero = () => {
           <motion.h1 
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="font-script text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-gradient-gold mb-1 md:mb-3 drop-shadow-sm pb-2 px-4"
+            className="font-script text-6xl sm:text-7xl md:text-8xl xl:text-9xl text-gradient-gold mb-1 md:mb-3 drop-shadow-sm pb-2 px-4"
           >
             Naseemudheen
           </motion.h1>
           <motion.p 
             animate={{ scale: [1, 1.1, 1], opacity: [0.85, 1, 0.85] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="font-script text-3xl sm:text-4xl md:text-5xl text-gold-500 my-1 md:my-3"
+            className="font-script text-4xl sm:text-5xl md:text-6xl text-gold-500 my-1 md:my-3"
           >
             &amp;
           </motion.p>
           <motion.h1 
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="font-script text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-gradient-gold drop-shadow-sm pb-2 px-4"
+            className="font-script text-6xl sm:text-7xl md:text-8xl xl:text-9xl text-gradient-gold drop-shadow-sm pb-2 px-4"
           >
             Ansheda
           </motion.h1>
