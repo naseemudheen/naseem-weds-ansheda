@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { Calendar, Clock, MapPin, Navigation } from 'lucide-react';
+import { Calendar, Clock, MapPin, Navigation, CalendarPlus } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const EventCard = ({ title, date, time, venue, address, mapLink, delay }) => (
+const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -48,17 +48,42 @@ const EventCard = ({ title, date, time, venue, address, mapLink, delay }) => (
       </div>
     </div>
 
-    <motion.a
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
-      href={mapLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-6 md:mt-8 inline-flex items-center justify-center w-full gap-2 px-4 py-3 md:px-6 md:py-4 bg-primary-800 border border-gold-400/60 text-gold-600 rounded-lg hover:bg-gold-500 hover:text-white transition-all shadow-sm font-semibold relative overflow-hidden"
-    >
-      <Navigation size={18} />
-      <span className="font-bold uppercase tracking-wider text-xs md:text-sm">View Location</span>
-    </motion.a>
+    {/* Action Buttons: Add to Google Calendar & View Location */}
+    <div className="mt-8 flex flex-col sm:flex-row gap-3">
+      <motion.a
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        href={calendarLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-gradient-to-r from-gold-500 to-gold-600 text-white rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-md shadow-gold-500/20 font-semibold text-xs md:text-sm"
+      >
+        <CalendarPlus size={18} />
+        <span className="uppercase tracking-wider">Add to Google Calendar</span>
+      </motion.a>
+
+      <motion.a
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        href={mapLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-primary-800 border border-gold-400/60 text-gold-600 rounded-xl hover:bg-gold-500 hover:text-white transition-all shadow-sm font-semibold text-xs md:text-sm"
+      >
+        <Navigation size={18} />
+        <span className="uppercase tracking-wider">View Location</span>
+      </motion.a>
+    </div>
+
+    {/* Interactive Location Map Preview */}
+    <div className="mt-6 rounded-xl overflow-hidden border border-gold-400/30 shadow-inner">
+      <iframe
+        title="Green Palace Auditorium Location"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=76.025,11.018,76.040,11.026&layer=mapnik&marker=11.0222479,76.0328619"
+        className="w-full h-48 md:h-56 border-0"
+        loading="lazy"
+      ></iframe>
+    </div>
   </motion.div>
 );
 
@@ -89,6 +114,13 @@ const Events = () => {
     const timer = setInterval(updateTimer, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  // Google Calendar event URL parameters (Times in UTC: 11:00 AM - 3:00 PM IST is 05:30 - 09:30 UTC)
+  const calendarEventUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+    'Naseemudheen weds Ansheda - Wedding Reception'
+  )}&dates=20261213T053000Z/20261213T093000Z&details=${encodeURIComponent(
+    'With joyous hearts, we invite you to celebrate the wedding reception of Naseemudheen & Ansheda on December 13th, 2026 at Green Palace Auditorium, Othukkungal, Pookkottur.\n\nLocation: https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9'
+  )}&location=${encodeURIComponent('Green Palace Auditorium, Othukkungal, Pookkottur')}`;
 
   return (
     <section id="events" className="py-12 md:py-24 md:min-h-[100dvh] px-4 bg-gradient-to-b from-dark-bg to-primary-900 relative overflow-hidden flex flex-col justify-center">
@@ -140,7 +172,7 @@ const Events = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 md:mt-16 justify-center">
-          <div className="w-full max-w-xl mx-auto">
+          <div className="w-full max-w-2xl mx-auto">
             <EventCard 
               title="Wedding Reception"
               date="Sunday, 13th December 2026"
@@ -148,6 +180,7 @@ const Events = () => {
               venue="Green Palace Auditorium"
               address="Othukkungal, Pookkottur"
               mapLink="https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9"
+              calendarLink={calendarEventUrl}
               delay={0.4}
             />
           </div>
