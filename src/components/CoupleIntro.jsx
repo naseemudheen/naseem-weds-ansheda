@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown, MapPin } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const CoupleIntro = () => {
   const fadeInUp = {
@@ -55,10 +55,6 @@ const CoupleIntro = () => {
 
             {/* Address Details */}
             <div className="font-serif text-cream-200/90 space-y-0.5 text-sm md:text-base leading-relaxed">
-              <div className="flex items-center justify-center gap-1.5 text-gold-600 text-[11px] md:text-xs font-semibold uppercase tracking-wider mb-1">
-                <MapPin size={13} className="text-gold-500" />
-                <span>Residence</span>
-              </div>
               <p className="font-medium text-cream-100">Erayassan House</p>
               <p className="text-xs md:text-sm text-gold-600 italic">Mattathur, Malappuram</p>
             </div>
@@ -110,10 +106,6 @@ const CoupleIntro = () => {
 
             {/* Address Details */}
             <div className="font-serif text-cream-200/90 space-y-0.5 text-sm md:text-base leading-relaxed">
-              <div className="flex items-center justify-center gap-1.5 text-gold-600 text-[11px] md:text-xs font-semibold uppercase tracking-wider mb-1">
-                <MapPin size={13} className="text-gold-500" />
-                <span>Residence</span>
-              </div>
               <p className="font-medium text-cream-100">Kalluparamban House</p>
               <p className="text-xs md:text-sm text-gold-600 italic">Chemmad, Malappuram</p>
             </div>
