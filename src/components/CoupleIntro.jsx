@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, MapPin } from 'lucide-react';
 
 const CoupleIntro = () => {
   const fadeInUp = {
@@ -26,7 +26,7 @@ const CoupleIntro = () => {
         </motion.div>
 
         {/* Main Layout — side-by-side on desktop with elegant center divider */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8">
 
           {/* Groom Card */}
           <motion.div
@@ -35,13 +35,30 @@ const CoupleIntro = () => {
             viewport={{ once: true, margin: "-60px" }}
             whileHover={{ scale: 1.02, y: -4 }}
             transition={{ duration: 0.9 }}
-            className="w-full md:flex-1 p-8 md:p-12 glass-card rounded-2xl relative hover:shadow-[0_15px_40px_rgba(168,125,43,0.12)] transition-all text-center"
+            className="w-full md:flex-1 p-7 md:p-10 glass-card rounded-2xl relative hover:shadow-[0_15px_40px_rgba(168,125,43,0.15)] transition-all text-center flex flex-col justify-between"
           >
             <div className="absolute -top-3 -left-3 w-10 h-10 border-t-2 border-l-2 border-gold-400 rounded-tl-xl opacity-60"></div>
             <div className="absolute -bottom-3 -right-3 w-10 h-10 border-b-2 border-r-2 border-gold-400 rounded-br-xl opacity-60"></div>
 
-            <h3 className="font-script text-4xl md:text-6xl text-cream-100 mb-2">Naseemudheen</h3>
-            <p className="font-serif text-gold-500 text-xs md:text-sm uppercase tracking-[0.25em] font-medium">The Groom</p>
+            <div>
+              <h3 className="font-script text-4xl md:text-6xl text-cream-100 mb-1">Naseemudheen</h3>
+              <span className="inline-block px-3.5 py-1 bg-primary-800 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[11px] md:text-xs uppercase tracking-[0.2em] font-semibold mt-1 mb-4">
+                The Groom
+              </span>
+            </div>
+
+            {/* Subtle Divider */}
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold-400/60 to-transparent mx-auto my-3"></div>
+
+            {/* Address Details */}
+            <div className="font-serif text-cream-200/90 space-y-1 text-sm md:text-base leading-relaxed pt-2">
+              <div className="flex items-center justify-center gap-1.5 text-gold-600 text-[11px] md:text-xs font-semibold uppercase tracking-wider mb-1.5">
+                <MapPin size={14} className="text-gold-500" />
+                <span>Address</span>
+              </div>
+              <p className="font-medium text-cream-100 text-base md:text-lg">Pookkottur</p>
+              <p className="text-xs md:text-sm text-gold-600 italic">Malappuram, Kerala</p>
+            </div>
           </motion.div>
 
           {/* Decorative divider & */}
@@ -50,9 +67,9 @@ const CoupleIntro = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="flex md:flex-col items-center gap-3 my-2 md:my-0 shrink-0"
+            className="flex md:flex-col items-center justify-center gap-3 my-2 md:my-0 shrink-0 self-center"
           >
-            <div className="w-12 md:w-px md:h-12 bg-gradient-to-r md:bg-gradient-to-b from-transparent to-gold-500/50"></div>
+            <div className="w-12 md:w-px md:h-16 bg-gradient-to-r md:bg-gradient-to-b from-transparent to-gold-500/50"></div>
             <motion.div
               animate={{ boxShadow: ['0 0 10px rgba(168,125,43,0.15)', '0 0 20px rgba(168,125,43,0.3)', '0 0 10px rgba(168,125,43,0.15)'] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -60,7 +77,7 @@ const CoupleIntro = () => {
             >
               <span className="font-script text-2xl md:text-3xl text-gold-500">&amp;</span>
             </motion.div>
-            <div className="w-12 md:w-px md:h-12 bg-gradient-to-l md:bg-gradient-to-t from-transparent to-gold-500/50"></div>
+            <div className="w-12 md:w-px md:h-16 bg-gradient-to-l md:bg-gradient-to-t from-transparent to-gold-500/50"></div>
           </motion.div>
 
           {/* Bride Card */}
@@ -70,13 +87,30 @@ const CoupleIntro = () => {
             viewport={{ once: true, margin: "-60px" }}
             whileHover={{ scale: 1.02, y: -4 }}
             transition={{ duration: 0.9, delay: 0.1 }}
-            className="w-full md:flex-1 p-8 md:p-12 glass-card rounded-2xl relative hover:shadow-[0_15px_40px_rgba(168,125,43,0.12)] transition-all text-center"
+            className="w-full md:flex-1 p-7 md:p-10 glass-card rounded-2xl relative hover:shadow-[0_15px_40px_rgba(168,125,43,0.15)] transition-all text-center flex flex-col justify-between"
           >
             <div className="absolute -top-3 -right-3 w-10 h-10 border-t-2 border-r-2 border-gold-400 rounded-tr-xl opacity-60"></div>
             <div className="absolute -bottom-3 -left-3 w-10 h-10 border-b-2 border-l-2 border-gold-400 rounded-bl-xl opacity-60"></div>
 
-            <h3 className="font-script text-4xl md:text-6xl text-cream-100 mb-2">Ansheda</h3>
-            <p className="font-serif text-gold-500 text-xs md:text-sm uppercase tracking-[0.25em] font-medium">The Bride</p>
+            <div>
+              <h3 className="font-script text-4xl md:text-6xl text-cream-100 mb-1">Ansheda</h3>
+              <span className="inline-block px-3.5 py-1 bg-primary-800 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[11px] md:text-xs uppercase tracking-[0.2em] font-semibold mt-1 mb-4">
+                The Bride
+              </span>
+            </div>
+
+            {/* Subtle Divider */}
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-gold-400/60 to-transparent mx-auto my-3"></div>
+
+            {/* Address Details */}
+            <div className="font-serif text-cream-200/90 space-y-1 text-sm md:text-base leading-relaxed pt-2">
+              <div className="flex items-center justify-center gap-1.5 text-gold-600 text-[11px] md:text-xs font-semibold uppercase tracking-wider mb-1.5">
+                <MapPin size={14} className="text-gold-500" />
+                <span>Address</span>
+              </div>
+              <p className="font-medium text-cream-100 text-base md:text-lg">Othukkungal</p>
+              <p className="text-xs md:text-sm text-gold-600 italic">Malappuram, Kerala</p>
+            </div>
           </motion.div>
 
         </div>
