@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Volume2, VolumeX, ChevronDown } from 'lucide-react';
+import { Volume2, VolumeX, ChevronDown, CalendarPlus } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import Logo from './Logo';
 
@@ -182,6 +182,27 @@ const Hero = () => {
           <ChevronDown size={20} />
         </motion.div>
       </motion.button>
+
+      {/* Floating Add to Calendar Button */}
+      <motion.a
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.5 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+          'Naseemudheen weds Ansheda - Wedding Reception'
+        )}&dates=20261213T053000Z/20261213T093000Z&details=${encodeURIComponent(
+          'With joyous hearts, we invite you to celebrate the wedding reception of Naseemudheen & Ansheda on December 13th, 2026 at Green Palace Auditorium, Othukkungal, Pookkottur.\n\nLocation: https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9'
+        )}&location=${encodeURIComponent('Green Palace Auditorium, Othukkungal, Pookkottur')}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Add to Calendar"
+        className="fixed bottom-4 left-4 sm:bottom-8 sm:left-8 z-50 inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full glass-card text-gold-600 hover:text-gold-700 bg-white/95 border border-gold-400/50 shadow-[0_4px_20px_rgba(168,125,43,0.18)] transition-all font-serif text-[11px] sm:text-xs uppercase tracking-[0.15em] font-semibold cursor-pointer"
+      >
+        <CalendarPlus size={16} className="text-gold-500 shrink-0" />
+        <span>Add to Calendar</span>
+      </motion.a>
 
       {/* Music Toggle */}
       <motion.button

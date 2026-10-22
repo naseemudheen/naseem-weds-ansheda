@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Calendar, Clock, MapPin, Navigation, CalendarPlus } from 'lucide-react';
+import { Calendar, Clock, MapPin, Navigation } from 'lucide-react';
 
-const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, delay }) => (
+const EventCard = ({ title, date, time, venue, address, mapLink, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -58,27 +58,15 @@ const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, d
       </p>
     </div>
 
-    {/* Action Buttons: Add to Google Calendar & View Location */}
-    <div className="mt-4 flex flex-col sm:flex-row gap-3">
-      <motion.a
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        href={calendarLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-gradient-to-r from-gold-500 to-gold-600 text-white rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-md shadow-gold-500/20 font-semibold text-xs md:text-sm"
-      >
-        <CalendarPlus size={18} />
-        <span className="uppercase tracking-wider">Add to Google Calendar</span>
-      </motion.a>
-
+    {/* Action Button: View Location */}
+    <div className="mt-6">
       <motion.a
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         href={mapLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-primary-800 border border-gold-400/60 text-gold-600 rounded-xl hover:bg-gold-500 hover:text-white transition-all shadow-sm font-semibold text-xs md:text-sm"
+        className="w-full inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-gradient-to-r from-gold-500 to-gold-600 text-white rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-md shadow-gold-500/20 font-semibold text-xs md:text-sm"
       >
         <Navigation size={18} />
         <span className="uppercase tracking-wider">View Location</span>
@@ -88,12 +76,6 @@ const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, d
 );
 
 const Events = () => {
-  const calendarEventUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-    'Naseemudheen weds Ansheda - Wedding Reception'
-  )}&dates=20261213T053000Z/20261213T093000Z&details=${encodeURIComponent(
-    'With joyous hearts, we invite you to celebrate the wedding reception of Naseemudheen & Ansheda on December 13th, 2026 at Green Palace Auditorium, Othukkungal, Pookkottur.\n\nLocation: https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9'
-  )}&location=${encodeURIComponent('Green Palace Auditorium, Othukkungal, Pookkottur')}`;
-
   return (
     <section id="events" className="py-12 md:py-20 px-4 bg-gradient-to-b from-dark-bg to-primary-900 relative overflow-hidden flex flex-col justify-center">
       {/* Decorative background elements */}
@@ -122,7 +104,6 @@ const Events = () => {
               venue="Green Palace Auditorium"
               address="Othukkungal, Pookkottur"
               mapLink="https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9"
-              calendarLink={calendarEventUrl}
               delay={0.2}
             />
           </div>
