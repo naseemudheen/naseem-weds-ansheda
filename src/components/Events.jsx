@@ -86,15 +86,7 @@ const EventCard = ({ title, date, time, venue, address, mapLink, calendarLink, d
       </motion.a>
     </div>
 
-    {/* Interactive Location Map Preview */}
-    <div className="mt-6 rounded-xl overflow-hidden border border-gold-400/30 shadow-inner">
-      <iframe
-        title="Green Palace Auditorium Location"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=76.025,11.018,76.040,11.026&layer=mapnik&marker=11.0222479,76.0328619"
-        className="w-full h-48 md:h-56 border-0"
-        loading="lazy"
-      ></iframe>
-    </div>
+
   </motion.div>
 );
 
