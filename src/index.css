@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-900: #2d0a16; /* Deep Bordeaux */
-  --color-primary-800: #4a1525;
-  --color-primary-700: #722036;
-  --color-gold-400: #dcb87d; /* Champagne Gold */
-  --color-gold-500: #c19b5c;
-  --color-gold-600: #a37f42;
-  --color-gold-light: #f4e8d1;
-  --color-cream-100: #faf7f2;
-  --color-cream-200: #f0e9df;
-  --color-dark-bg: #381a26;
+  --color-primary-900: #faf6f0; /* Warm ivory/alabaster base background */
+  --color-primary-800: #f3ebd9; /* Soft champagne gold tint for badges & pills */
+  --color-primary-700: #e9dec9;
+  --color-gold-400: #a87d2b; /* Antique gold for accents, borders, icons */
+  --color-gold-500: #8f6516; /* Deep rich gold */
+  --color-gold-600: #73500e;
+  --color-gold-light: #d6b468;
+  --color-cream-100: #2a1810; /* Deep royal espresso for prominent headings & names */
+  --color-cream-200: #4a382c; /* Warm charcoal-espresso for body text & descriptions */
+  --color-dark-bg: #fffdf9; /* Pearl cream backdrop */
 
   --font-sans: "Lato", sans-serif;
   --font-serif: "Playfair Display", serif;
@@ -19,17 +19,17 @@
 
 @layer base {
   body {
-    @apply bg-dark-bg text-cream-200 font-sans antialiased overflow-x-hidden;
+    @apply bg-primary-900 text-cream-200 font-sans antialiased overflow-x-hidden;
   }
 }
 
 @layer utilities {
   .text-gradient-gold {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 via-gold-light to-gold-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#8a5b18] via-[#c59c47] to-[#7d4f10];
   }
   
   .glass-card {
-    @apply bg-dark-bg/60 backdrop-blur-md border border-gold-500/30 shadow-xl;
+    @apply bg-white/80 backdrop-blur-md border border-gold-400/30 shadow-[0_10px_35px_rgba(168,125,43,0.08)];
   }
 }
 
@@ -38,14 +38,14 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #381a26; 
+  background: #f4ede1; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #4a1525; 
+  background: #d8c29d; 
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c19b5c; 
+  background: #a87d2b; 
 }
 
 /* Base styles to prevent horizontal scroll issues with Framer Motion */
@@ -53,4 +53,5 @@ html, body {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #faf6f0;
 }

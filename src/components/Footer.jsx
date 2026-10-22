@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent"></div>
       
       {/* Background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gold-600 rounded-full blur-[100px] opacity-20"></div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gold-400 rounded-full blur-[100px] opacity-15"></div>
 
       <div className="max-w-3xl mx-auto relative z-10">
         <motion.div
@@ -21,7 +21,7 @@ const Footer = () => {
 
           <h2 className="font-script text-4xl md:text-5xl text-cream-100 mb-6">Thank You</h2>
           
-          <p className="font-serif text-cream-200/80 mb-12 italic text-lg">
+          <p className="font-serif text-cream-200/90 mb-12 italic text-lg">
             We look forward to celebrating with you!
           </p>
 
@@ -30,15 +30,15 @@ const Footer = () => {
             <motion.span 
               animate={{ scale: [1, 1.3, 1] }} 
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="font-script text-gold-400 text-2xl"
+              className="font-script text-gold-500 text-2xl"
             >
               &hearts;
             </motion.span>
             <div className="h-px w-16 bg-gold-400/50"></div>
           </div>
 
-          <p className="text-xs text-gold-400/50 uppercase tracking-[0.3em] font-sans">
-            Raeesudheen & Shahida &copy; 2026
+          <p className="text-xs text-gold-600/70 uppercase tracking-[0.3em] font-sans font-medium">
+            Naseemudheen & Ansheda &copy; 2026
           </p>
         </motion.div>
       </div>

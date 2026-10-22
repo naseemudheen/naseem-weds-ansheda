@@ -101,12 +101,12 @@ function App() {
   }, [isLoading]);
 
   return (
-    <div className="relative min-h-screen bg-primary-900 text-cream-200 selection:bg-gold-500/30 selection:text-gold-400">
+    <div className="relative min-h-screen bg-primary-900 text-cream-200 selection:bg-gold-500/20 selection:text-gold-600">
       {/* Desktop Cursor Glow */}
       <motion.div
         className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300 hidden md:block"
         animate={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(212, 175, 55, 0.05), transparent 40%)`
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(168, 125, 43, 0.06), transparent 40%)`
         }}
       />
 

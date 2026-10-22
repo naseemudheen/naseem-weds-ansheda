@@ -1,16 +1,34 @@
-# React + Vite
+# Naseemudheen weds Ansheda - Wedding Invitation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A digital wedding invitation web application celebrating the union of Naseemudheen and Ansheda.
 
-Currently, two official plugins are available:
+## Wedding Details
+- **Date:** Sunday, 13th December 2026
+- **Time:** 11:00 AM to 3:00 PM
+- **Venue:** Green Palace Auditorium, Othukkungal, Pookkottur
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- **Light Luxury Theme:** Refined ivory, champagne, and antique gold styling.
+- **Interactive Experience:** Smooth scroll powered by Lenis, auto-scrolling tour, interactive ambient audio playback, and live countdown timer.
+- **Responsive Design:** Optimized for mobile, tablet, and desktop viewports.
 
-## React Compiler
+## Tech Stack
+- **Framework:** React 19 + Vite
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Smooth Scroll:** Lenis
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Production Build
+
+```bash
+npm run build
+npm run preview
+```

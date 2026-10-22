@@ -62,7 +62,7 @@ const LoadingScreen = ({ onComplete }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="font-serif tracking-[0.3em] text-gold-400/70 text-sm uppercase"
+                    className="font-serif tracking-[0.3em] text-gold-600/80 text-sm uppercase font-medium"
                   >
                     Loading...
                   </motion.p>
@@ -72,7 +72,7 @@ const LoadingScreen = ({ onComplete }) => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     onClick={handleOpen}
-                    className="px-8 py-3 border border-gold-400/50 text-gold-300 font-serif tracking-[0.2em] uppercase text-xs hover:bg-gold-500/10 transition-all duration-500 rounded-sm"
+                    className="px-8 py-3 border border-gold-400 bg-white/60 text-gold-600 font-serif tracking-[0.2em] uppercase text-xs hover:bg-gold-500 hover:text-white transition-all duration-500 rounded-sm shadow-sm cursor-pointer"
                   >
                     Open Invitation
                   </motion.button>

@@ -13,29 +13,29 @@ const Logo = ({ className = "", size = "md" }) => {
       <motion.div 
         animate={{ rotate: 360 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0 border-[1px] border-gold-400/30 rounded-full"
+        className="absolute inset-0 border-[1px] border-gold-400/40 rounded-full"
       ></motion.div>
       <motion.div 
         animate={{ rotate: -360 }}
         transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-[-10%] border-[1px] border-gold-400/20 rounded-[40%] rotate-45"
+        className="absolute inset-[-10%] border-[1px] border-gold-400/30 rounded-[40%] rotate-45"
       ></motion.div>
       <div className="absolute inset-[-5%] border border-gold-400/40 rounded-[30%] rotate-[22.5deg]"></div>
       <div className="absolute inset-[-5%] border border-gold-400/40 rounded-[30%] rotate-[-22.5deg]"></div>
       
       {/* Center glowing element */}
-      <div className="absolute inset-0 bg-primary-900/80 rounded-full blur-sm z-0"></div>
+      <div className="absolute inset-0 bg-primary-900/90 rounded-full blur-sm z-0"></div>
       
       {/* Text Monogram Overlap */}
       <div className="relative z-10 flex items-center justify-center font-serif mt-1">
-        {/* Silver R */}
-        <span className="relative text-[1.2em] bg-clip-text text-transparent bg-gradient-to-b from-gray-100 via-gray-400 to-gray-800 drop-shadow-md z-20">R</span>
+        {/* N */}
+        <span className="relative text-[1.2em] bg-clip-text text-transparent bg-gradient-to-b from-[#8a5b18] via-[#a87d2b] to-[#5c3c0a] drop-shadow-sm z-20 font-serif font-bold">N</span>
         
         {/* Ampersand */}
-        <span className="relative text-[0.6em] font-script text-gold-400 mx-1">&amp;</span>
+        <span className="relative text-[0.6em] font-script text-gold-500 mx-1">&amp;</span>
         
-        {/* Gold S */}
-        <span className="relative text-[1.4em] bg-clip-text text-transparent bg-gradient-to-br from-[#f3e5ab] via-[#d4af37] to-[#aa7c11] z-10">S</span>
+        {/* A */}
+        <span className="relative text-[1.3em] bg-clip-text text-transparent bg-gradient-to-br from-[#c59c47] via-[#8a5b18] to-[#5c3c0a] z-10 font-serif font-bold">A</span>
       </div>
     </div>
   );
