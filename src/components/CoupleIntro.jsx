@@ -52,7 +52,7 @@ const CoupleIntro = () => {
 
               {/* Parentage */}
               <p className="font-serif italic text-cream-100 text-xs sm:text-sm mb-4">
-                Son of Late Mohammed
+                Son of Late Mohammed Erayassan
               </p>
             </div>
 
@@ -60,9 +60,9 @@ const CoupleIntro = () => {
             <div className="pt-2.5 border-t border-gold-400/20 flex items-center gap-2 text-cream-200/90 font-serif text-xs sm:text-sm">
               <MapPin size={14} className="text-gold-500 shrink-0" />
               <div className="truncate">
-                <span className="font-medium text-cream-100">Erayassan House</span>
+                <span className="font-medium text-cream-100">Mattathur</span>
                 <span className="text-gold-600/70 mx-1.5">·</span>
-                <span className="italic text-gold-600">Mattathur, Malappuram</span>
+                <span className="italic text-gold-600">Malappuram</span>
               </div>
             </div>
           </motion.div>
