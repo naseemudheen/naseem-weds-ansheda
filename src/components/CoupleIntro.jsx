@@ -38,18 +38,20 @@ const CoupleIntro = () => {
             className="w-full glass-card rounded-xl p-4 sm:p-6 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
           >
             <div>
-              {/* Header: Name & Role Badge */}
-              <div className="flex items-baseline justify-between gap-2 mb-1 flex-wrap">
-                <h3 className="font-script text-4xl sm:text-5xl text-gradient-gold leading-tight">
-                  Naseemudheen
-                </h3>
-                <span className="px-2.5 py-0.5 bg-primary-800/90 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] uppercase tracking-[0.2em] font-semibold">
+              {/* Name */}
+              <h3 className="font-script text-4xl sm:text-5xl text-gradient-gold leading-tight mb-2">
+                Naseemudheen
+              </h3>
+
+              {/* Role Badge */}
+              <div className="mb-2.5">
+                <span className="inline-block px-3 py-0.5 bg-primary-800/90 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-semibold">
                   The Groom
                 </span>
               </div>
 
               {/* Parentage */}
-              <p className="font-serif italic text-cream-100 text-xs sm:text-sm mb-3">
+              <p className="font-serif italic text-cream-100 text-xs sm:text-sm mb-4">
                 Son of Late Mohammed
               </p>
             </div>
@@ -75,18 +77,20 @@ const CoupleIntro = () => {
             className="w-full glass-card rounded-xl p-4 sm:p-6 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
           >
             <div>
-              {/* Header: Name & Role Badge */}
-              <div className="flex items-baseline justify-between gap-2 mb-1 flex-wrap">
-                <h3 className="font-script text-4xl sm:text-5xl text-gradient-gold leading-tight">
-                  Ansheda
-                </h3>
-                <span className="px-2.5 py-0.5 bg-primary-800/90 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] uppercase tracking-[0.2em] font-semibold">
+              {/* Name */}
+              <h3 className="font-script text-4xl sm:text-5xl text-gradient-gold leading-tight mb-2">
+                Ansheda
+              </h3>
+
+              {/* Role Badge */}
+              <div className="mb-2.5">
+                <span className="inline-block px-3 py-0.5 bg-primary-800/90 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-semibold">
                   The Bride
                 </span>
               </div>
 
               {/* Parentage */}
-              <p className="font-serif italic text-cream-100 text-xs sm:text-sm mb-3">
+              <p className="font-serif italic text-cream-100 text-xs sm:text-sm mb-4">
                 Daughter of Ibrahim
               </p>
             </div>
