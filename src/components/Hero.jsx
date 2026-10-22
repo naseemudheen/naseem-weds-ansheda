@@ -190,7 +190,7 @@ const Hero = () => {
         transition={{ delay: 2.5 }}
         onClick={toggleMute}
         aria-label="Toggle background music"
-        className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full glass-card flex items-center justify-center text-gold-500 hover:text-gold-600 hover:scale-110 transition-all duration-300 shadow-[0_4px_20px_rgba(168,125,43,0.18)] cursor-pointer"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 w-11 h-11 sm:w-12 sm:h-12 rounded-full glass-card flex items-center justify-center text-gold-500 hover:text-gold-600 hover:scale-110 transition-all duration-300 shadow-[0_4px_20px_rgba(168,125,43,0.18)] cursor-pointer"
       >
         {isPlaying ? (
           <div className="relative">
