@@ -193,8 +193,8 @@ const Hero = () => {
         href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
           'Naseemudheen weds Ansheda - Wedding Reception'
         )}&dates=20261213T053000Z/20261213T093000Z&details=${encodeURIComponent(
-          'With joyous hearts, we invite you to celebrate the wedding reception of Naseemudheen & Ansheda on December 13th, 2026 at Green Palace Auditorium, Othukkungal, Pookkottur.\n\nLocation: https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9'
-        )}&location=${encodeURIComponent('Green Palace Auditorium, Othukkungal, Pookkottur')}`}
+          'With joyous hearts, we invite you to celebrate the wedding reception of Naseemudheen & Ansheda on December 13th, 2026 at Green Palace Auditorium, Othukkungal.\n\nLocation: https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9'
+        )}&location=${encodeURIComponent('Green Palace Auditorium, Othukkungal')}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Add to Calendar"

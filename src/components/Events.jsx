@@ -102,7 +102,7 @@ const Events = () => {
               date="Sunday, 13th December 2026"
               time="11:00 AM to 3:00 PM"
               venue="Green Palace Auditorium"
-              address="Othukkungal, Pookkottur"
+              address="Othukkungal"
               mapLink="https://maps.app.goo.gl/hUHXXzxFMCqLAF4v9"
               delay={0.2}
             />
