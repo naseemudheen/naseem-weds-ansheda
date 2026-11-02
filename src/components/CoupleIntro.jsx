@@ -22,12 +22,12 @@ const CoupleIntro = () => {
           variants={fadeInUp}
           className="text-center mb-6 md:mb-10"
         >
-          <h2 className="font-script text-4xl md:text-6xl text-gold-500 mb-1.5 md:mb-2">The Couple</h2>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto"></div>
+          <h2 className="font-script text-5xl md:text-6xl text-gold-500 mb-2">The Couple</h2>
+          <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto"></div>
         </motion.div>
 
         {/* Couple Cards Container — Left-aligned on mobile, sleek side-by-side on desktop */}
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-6 items-stretch">
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-5 md:gap-6 items-stretch">
 
           {/* Groom Card */}
           <motion.div
@@ -35,34 +35,34 @@ const CoupleIntro = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             whileHover={{ y: -3, transition: { duration: 0.2 } }}
-            className="w-full glass-card rounded-xl p-4 sm:p-6 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+            className="w-full glass-card rounded-2xl p-5 sm:p-7 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
           >
             <div>
               {/* Name */}
-              <h3 className="font-script text-4xl sm:text-5xl text-gradient-gold leading-tight mb-2">
+              <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold leading-tight mb-2.5 font-bold">
                 Naseemudheen
               </h3>
 
               {/* Role Badge */}
-              <div className="mb-2.5">
-                <span className="inline-block px-3 py-0.5 bg-primary-800/90 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-semibold">
+              <div className="mb-3">
+                <span className="inline-block px-3.5 py-1 bg-primary-800/95 border border-gold-400/40 rounded-full font-serif text-gold-600 text-xs sm:text-sm uppercase tracking-[0.2em] font-bold">
                   The Groom
                 </span>
               </div>
 
               {/* Parentage */}
-              <p className="font-serif italic text-cream-100 text-xs sm:text-sm mb-4">
+              <p className="font-serif italic text-cream-100 text-sm sm:text-base md:text-lg mb-4 font-medium leading-relaxed">
                 Son of Late Mohammed Erayassan
               </p>
             </div>
 
             {/* Residence Address */}
-            <div className="pt-2.5 border-t border-gold-400/20 flex items-center gap-2 text-cream-200/90 font-serif text-xs sm:text-sm">
-              <MapPin size={14} className="text-gold-500 shrink-0" />
-              <div className="truncate">
-                <span className="font-medium text-cream-100">Erayassan House</span>
-                <span className="text-gold-600/70 mx-1.5">·</span>
-                <span className="italic text-gold-600">Mattathur, Malappuram</span>
+            <div className="pt-3 border-t border-gold-400/20 flex items-start gap-2.5 text-cream-200 font-serif text-sm sm:text-base">
+              <MapPin size={18} className="text-gold-500 shrink-0 mt-0.5" />
+              <div className="leading-snug">
+                <span className="font-semibold text-cream-100">Erayassan House</span>
+                <span className="text-gold-600/70 mx-1.5 font-sans">·</span>
+                <span className="italic text-gold-600 font-medium">Mattathur, Malappuram</span>
               </div>
             </div>
           </motion.div>
@@ -74,34 +74,34 @@ const CoupleIntro = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -3, transition: { duration: 0.2 } }}
-            className="w-full glass-card rounded-xl p-4 sm:p-6 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+            className="w-full glass-card rounded-2xl p-5 sm:p-7 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
           >
             <div>
               {/* Name */}
-              <h3 className="font-script text-4xl sm:text-5xl text-gradient-gold leading-tight mb-2">
+              <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold leading-tight mb-2.5 font-bold">
                 Ansheda
               </h3>
 
               {/* Role Badge */}
-              <div className="mb-2.5">
-                <span className="inline-block px-3 py-0.5 bg-primary-800/90 border border-gold-400/40 rounded-full font-serif text-gold-600 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] font-semibold">
+              <div className="mb-3">
+                <span className="inline-block px-3.5 py-1 bg-primary-800/95 border border-gold-400/40 rounded-full font-serif text-gold-600 text-xs sm:text-sm uppercase tracking-[0.2em] font-bold">
                   The Bride
                 </span>
               </div>
 
               {/* Parentage */}
-              <p className="font-serif italic text-cream-100 text-xs sm:text-sm mb-4">
+              <p className="font-serif italic text-cream-100 text-sm sm:text-base md:text-lg mb-4 font-medium leading-relaxed">
                 Daughter of Ibrahim
               </p>
             </div>
 
             {/* Residence Address */}
-            <div className="pt-2.5 border-t border-gold-400/20 flex items-center gap-2 text-cream-200/90 font-serif text-xs sm:text-sm">
-              <MapPin size={14} className="text-gold-500 shrink-0" />
-              <div className="truncate">
-                <span className="font-medium text-cream-100">Kalluparamban House</span>
-                <span className="text-gold-600/70 mx-1.5">·</span>
-                <span className="italic text-gold-600">Chemmad, Malappuram</span>
+            <div className="pt-3 border-t border-gold-400/20 flex items-start gap-2.5 text-cream-200 font-serif text-sm sm:text-base">
+              <MapPin size={18} className="text-gold-500 shrink-0 mt-0.5" />
+              <div className="leading-snug">
+                <span className="font-semibold text-cream-100">Kalluparamban House</span>
+                <span className="text-gold-600/70 mx-1.5 font-sans">·</span>
+                <span className="italic text-gold-600 font-medium">Chemmad, Malappuram</span>
               </div>
             </div>
           </motion.div>
@@ -117,13 +117,13 @@ const CoupleIntro = () => {
           onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
           className="mt-8 md:mt-12 mx-auto flex flex-col items-center justify-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity relative z-20"
         >
-          <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold-600 font-semibold">Next Section</span>
+          <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.25em] text-gold-600 font-bold">Next Section</span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="text-gold-500"
           >
-            <ChevronDown size={18} />
+            <ChevronDown size={20} />
           </motion.div>
         </motion.button>
 

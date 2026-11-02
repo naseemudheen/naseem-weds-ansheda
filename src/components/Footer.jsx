@@ -27,18 +27,18 @@ const Footer = () => {
         >
           <Logo size="md" className="mb-4 md:mb-6" />
 
-          <h2 className="font-script text-4xl sm:text-5xl md:text-6xl text-gold-500 mb-3">Thank You</h2>
+          <h2 className="font-script text-5xl sm:text-6xl md:text-7xl text-gold-500 mb-3">Thank You</h2>
           
-          <p className="font-serif text-cream-200/90 mb-2 italic text-base sm:text-lg md:text-xl">
+          <p className="font-serif text-cream-200 mb-3 italic text-lg sm:text-xl md:text-2xl font-medium">
             Your duas &amp; presence mean a lot to us
           </p>
 
-          <p className="font-serif italic text-gold-600/90 text-xs sm:text-sm md:text-base mb-6">
+          <p className="font-serif italic text-gold-600 text-sm sm:text-base md:text-lg mb-6 font-medium leading-relaxed">
             With love,<br />
             The families of Naseemudheen &amp; Ansheda
           </p>
 
-          <div className="flex items-center justify-center gap-4 mb-2">
+          <div className="flex items-center justify-center gap-4 mb-3">
             <div className="h-px w-16 bg-gold-400/40"></div>
             <motion.span 
               animate={{ scale: [1, 1.25, 1] }} 
@@ -54,7 +54,7 @@ const Footer = () => {
 
       {/* Bottom Plane / Copyright Pinned to the Bottom of the Screen */}
       <div className="w-full relative z-10 border-t border-gold-400/20 bg-primary-900/80 backdrop-blur-sm py-4 px-4 mt-auto">
-        <p className="text-[10px] sm:text-xs text-gold-600/80 uppercase tracking-[0.25em] font-sans font-medium">
+        <p className="text-xs sm:text-sm text-gold-600 uppercase tracking-[0.22em] font-sans font-bold">
           Naseemudheen &amp; Ansheda &copy; 2026
         </p>
       </div>

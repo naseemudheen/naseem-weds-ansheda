@@ -55,15 +55,15 @@ const LoadingScreen = ({ onComplete }) => {
               transition={{ delay: 0.2, duration: 1 }}
               src="/bismillah.png"
               alt="بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ"
-              className="h-10 md:h-12 w-auto object-contain mb-5 filter drop-shadow-[0_1px_2px_rgba(168,125,43,0.3)] brightness-95"
+              className="h-11 md:h-14 w-auto object-contain mb-5 filter drop-shadow-[0_1px_2px_rgba(168,125,43,0.3)] brightness-95"
             />
 
             <Logo size="lg" className="mb-4" />
 
-            <p className="font-script text-2xl md:text-3xl text-gradient-gold mb-1">
+            <p className="font-script text-3xl sm:text-4xl text-gradient-gold mb-1.5 font-bold">
               Naseemudheen &amp; Ansheda
             </p>
-            <p className="font-serif tracking-[0.25em] uppercase text-[11px] text-gold-600 mb-5">
+            <p className="font-serif tracking-[0.25em] uppercase text-xs sm:text-sm text-gold-600 font-bold mb-5">
               Wedding Invitation
             </p>
 
@@ -82,7 +82,7 @@ const LoadingScreen = ({ onComplete }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="font-serif tracking-[0.3em] text-gold-600/80 text-xs uppercase font-medium"
+                    className="font-serif tracking-[0.25em] text-gold-600 text-sm uppercase font-bold"
                   >
                     Preparing Invitation...
                   </motion.p>
@@ -92,7 +92,7 @@ const LoadingScreen = ({ onComplete }) => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     onClick={handleOpen}
-                    className="px-8 py-3.5 border border-gold-400 bg-white/70 text-gold-600 font-serif tracking-[0.25em] uppercase text-xs hover:bg-gold-500 hover:text-white transition-all duration-500 rounded-sm shadow-md cursor-pointer font-semibold"
+                    className="px-8 py-3.5 border border-gold-400 bg-white/90 text-gold-600 font-serif tracking-[0.25em] uppercase text-xs sm:text-sm hover:bg-gold-500 hover:text-white transition-all duration-500 rounded-sm shadow-md cursor-pointer font-bold"
                   >
                     Open Invitation
                   </motion.button>

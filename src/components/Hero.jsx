@@ -41,7 +41,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-gradient-to-b from-dark-bg to-primary-900 pt-6 md:pt-12">
+    <section id="hero" className="relative min-h-[100svh] flex flex-col justify-between items-center overflow-hidden bg-gradient-to-b from-dark-bg to-primary-900 pt-8 sm:pt-10 md:pt-14 pb-6 px-4">
       {/* Background Texture Overlay: Arabesque Gold Ring Watermark */}
       <div className="absolute inset-0 opacity-20 bg-arabesque-tile pointer-events-none"></div>
       
@@ -73,26 +73,26 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 text-center px-4 w-full mx-auto flex flex-col items-center justify-center flex-1 mt-1 mb-2 md:my-6">
+      <div className="relative z-10 text-center px-2 sm:px-4 w-full max-w-2xl mx-auto flex flex-col items-center justify-center flex-1 my-auto">
         
         {/* FIRST PLACE / FIRST STRING: Arabic Bismillahir Rahmanir Rahim */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.2 }}
-          className="flex flex-col items-center mb-2"
+          className="flex flex-col items-center mb-3 sm:mb-4"
         >
           <img
             src="/bismillah.png"
             alt="بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ"
-            className="h-10 sm:h-12 md:h-14 w-auto object-contain filter drop-shadow-[0_1px_3px_rgba(168,125,43,0.3)] brightness-90 hover:brightness-100 transition-all"
+            className="h-11 sm:h-13 md:h-15 w-auto object-contain filter drop-shadow-[0_1px_3px_rgba(168,125,43,0.3)] brightness-90 hover:brightness-100 transition-all"
           />
-          <p className="font-serif italic text-gold-600 text-xs sm:text-sm md:text-base tracking-wide mt-1">
+          <p className="font-serif italic text-gold-600 text-sm sm:text-base md:text-lg tracking-wide mt-2 font-medium">
             With Allah&rsquo;s blessings and grace
           </p>
 
           {/* Ornate Divider (inspired by shibin-sabeeha invite) */}
-          <div className="w-48 sm:w-60 md:w-72 my-2 text-gold-500">
+          <div className="w-52 sm:w-64 md:w-72 my-2 sm:my-3 text-gold-500">
             <svg viewBox="0 0 280 28" className="w-full h-auto fill-current">
               <g fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
                 <path d="M30 14 H120"/>
@@ -113,13 +113,13 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mb-2 md:mb-4 flex flex-col items-center"
+          className="mb-2 sm:mb-4 flex flex-col items-center"
         >
-          <Logo size="md" className="mb-2 md:mb-3" />
-          <p className="font-serif text-gold-600 uppercase tracking-[0.25em] text-xs md:text-sm font-semibold">
+          <Logo size="md" className="mb-2.5 sm:mb-3" />
+          <p className="font-serif text-gold-600 uppercase tracking-[0.22em] text-xs sm:text-sm md:text-base font-bold">
             Together with our families
           </p>
-          <p className="font-serif italic text-cream-200/90 text-xs sm:text-sm md:text-base mt-0.5">
+          <p className="font-serif italic text-cream-200 text-sm sm:text-base md:text-lg mt-1 font-medium max-w-sm sm:max-w-md mx-auto leading-snug">
             request the pleasure of your company to celebrate the wedding union of
           </p>
         </motion.div>
@@ -128,26 +128,26 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 1 }}
-          className="my-3 md:my-6 flex flex-col items-center"
+          className="my-2 sm:my-4 md:my-6 flex flex-col items-center w-full"
         >
           <motion.h1 
-            animate={{ y: [0, -8, 0] }}
+            animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="font-script text-6xl sm:text-7xl md:text-8xl xl:text-9xl text-gradient-gold mb-1 md:mb-3 drop-shadow-sm pb-2 px-4"
+            className="font-script text-5xl sm:text-6xl md:text-8xl xl:text-9xl text-gradient-gold drop-shadow-sm pb-1 sm:pb-2 px-2 leading-[1.15]"
           >
             Naseemudheen
           </motion.h1>
           <motion.p 
             animate={{ scale: [1, 1.1, 1], opacity: [0.85, 1, 0.85] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="font-script text-4xl sm:text-5xl md:text-6xl text-gold-500 my-1 md:my-3"
+            className="font-script text-3xl sm:text-4xl md:text-6xl text-gold-500 my-0.5 sm:my-2"
           >
             &amp;
           </motion.p>
           <motion.h1 
-            animate={{ y: [0, -8, 0] }}
+            animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="font-script text-6xl sm:text-7xl md:text-8xl xl:text-9xl text-gradient-gold drop-shadow-sm pb-2 px-4"
+            className="font-script text-5xl sm:text-6xl md:text-8xl xl:text-9xl text-gradient-gold drop-shadow-sm pb-1 sm:pb-2 px-2 leading-[1.15]"
           >
             Ansheda
           </motion.h1>
@@ -157,9 +157,9 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.8 }}
-          className="mt-4 md:mt-8"
+          className="mt-3 sm:mt-5 md:mt-7"
         >
-          <p className="font-serif text-cream-200/90 max-w-xl mx-auto text-sm md:text-base leading-relaxed italic">
+          <p className="font-serif text-cream-200 max-w-lg mx-auto text-sm sm:text-base md:text-lg leading-relaxed italic font-medium px-2">
             &ldquo;With joyous hearts, we invite you to celebrate the union of our hearts and lives.&rdquo;
           </p>
         </motion.div>
@@ -171,15 +171,15 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5, duration: 1 }}
         onClick={() => document.getElementById('couple')?.scrollIntoView({ behavior: 'smooth' })}
-        className="relative z-20 flex flex-col items-center justify-center gap-1 md:gap-2 cursor-pointer hover:opacity-80 transition-opacity pb-4 md:pb-8"
+        className="relative z-20 flex flex-col items-center justify-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity pb-3 sm:pb-6"
       >
-        <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-gold-600 font-semibold">Scroll to Explore</span>
+        <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.25em] text-gold-600 font-bold">Scroll to Explore</span>
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="text-gold-500"
         >
-          <ChevronDown size={20} />
+          <ChevronDown size={22} />
         </motion.div>
       </motion.button>
 
@@ -198,9 +198,9 @@ const Hero = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Add to Calendar"
-        className="fixed bottom-4 left-4 sm:bottom-8 sm:left-8 z-50 inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full glass-card text-gold-600 hover:text-gold-700 bg-white/95 border border-gold-400/50 shadow-[0_4px_20px_rgba(168,125,43,0.18)] transition-all font-serif text-[11px] sm:text-xs uppercase tracking-[0.15em] font-semibold cursor-pointer"
+        className="fixed bottom-4 left-3 sm:bottom-8 sm:left-8 z-50 inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-full glass-card text-gold-600 hover:text-gold-700 bg-white/95 border border-gold-400/50 shadow-[0_4px_20px_rgba(168,125,43,0.18)] transition-all font-serif text-xs sm:text-sm uppercase tracking-[0.15em] font-bold cursor-pointer backdrop-blur-md"
       >
-        <CalendarPlus size={16} className="text-gold-500 shrink-0" />
+        <CalendarPlus size={18} className="text-gold-500 shrink-0" />
         <span>Add to Calendar</span>
       </motion.a>
 
@@ -211,12 +211,12 @@ const Hero = () => {
         transition={{ delay: 2.5 }}
         onClick={toggleMute}
         aria-label="Toggle background music"
-        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 w-11 h-11 sm:w-12 sm:h-12 rounded-full glass-card flex items-center justify-center text-gold-500 hover:text-gold-600 hover:scale-110 transition-all duration-300 shadow-[0_4px_20px_rgba(168,125,43,0.18)] cursor-pointer"
+        className="fixed bottom-4 right-3 sm:bottom-8 sm:right-8 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-card flex items-center justify-center text-gold-500 hover:text-gold-600 hover:scale-110 transition-all duration-300 shadow-[0_4px_20px_rgba(168,125,43,0.18)] cursor-pointer bg-white/95 border border-gold-400/50 backdrop-blur-md"
       >
         {isPlaying ? (
           <div className="relative">
             <Volume2 size={24} />
-            <span className="absolute -top-1 -right-1 w-2 h-2 bg-gold-500 rounded-full animate-ping"></span>
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-gold-500 rounded-full animate-ping"></span>
           </div>
         ) : (
           <VolumeX size={24} />
