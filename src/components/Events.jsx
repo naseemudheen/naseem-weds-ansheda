@@ -54,13 +54,6 @@ const EventCard = ({ title, date, time, venue, address, mapLink, delay }) => (
       </div>
     </div>
 
-    {/* Insha Allah blessing */}
-    <div className="text-center my-7">
-      <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-gold-500 font-bold" dir="rtl">
-        إِنْ شَاءَ اللّٰهُ
-      </p>
-    </div>
-
     {/* Action Button: View Location */}
     <div className="mt-6">
       <motion.a
