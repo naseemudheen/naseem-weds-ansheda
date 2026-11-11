@@ -26,7 +26,7 @@ const CoupleIntro = () => {
           <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto"></div>
         </motion.div>
 
-        {/* Couple Cards Container — Left-aligned on mobile, sleek side-by-side on desktop */}
+        {/* Couple Cards Container — Center-aligned cards */}
         <div className="flex flex-col md:grid md:grid-cols-2 gap-5 md:gap-6 items-stretch">
 
           {/* Groom Card */}
@@ -35,30 +35,30 @@ const CoupleIntro = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             whileHover={{ y: -3, transition: { duration: 0.2 } }}
-            className="w-full glass-card rounded-2xl p-5 sm:p-7 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+            className="w-full glass-card rounded-2xl p-5 sm:p-7 border border-gold-400/30 text-center shadow-sm hover:shadow-md transition-all flex flex-col justify-between items-center"
           >
-            <div>
+            <div className="flex flex-col items-center w-full">
               {/* Name */}
-              <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold leading-tight mb-2.5 font-bold">
+              <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold leading-tight mb-2.5 font-bold text-center">
                 Naseemudheen
               </h3>
 
               {/* Role Badge */}
-              <div className="mb-3">
+              <div className="mb-3 flex justify-center">
                 <span className="inline-block px-3.5 py-1 bg-primary-800/95 border border-gold-400/40 rounded-full font-serif text-gold-600 text-xs sm:text-sm uppercase tracking-[0.2em] font-bold">
                   The Groom
                 </span>
               </div>
 
               {/* Parentage */}
-              <p className="font-serif italic text-cream-100 text-sm sm:text-base md:text-lg mb-4 font-medium leading-relaxed">
+              <p className="font-serif italic text-cream-100 text-sm sm:text-base md:text-lg mb-4 font-medium leading-relaxed text-center">
                 Son of Late Mohammed Erayassan
               </p>
             </div>
 
             {/* Residence Address */}
-            <div className="pt-3 border-t border-gold-400/20 flex items-start gap-2.5 text-cream-200 font-serif text-sm sm:text-base">
-              <MapPin size={18} className="text-gold-500 shrink-0 mt-0.5" />
+            <div className="w-full pt-3 border-t border-gold-400/20 flex items-center justify-center gap-2 text-cream-200 font-serif text-sm sm:text-base text-center">
+              <MapPin size={17} className="text-gold-500 shrink-0" />
               <div className="leading-snug">
                 <span className="font-semibold text-cream-100">Erayassan House</span>
                 <span className="text-gold-600/70 mx-1.5 font-sans">·</span>
@@ -74,30 +74,30 @@ const CoupleIntro = () => {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -3, transition: { duration: 0.2 } }}
-            className="w-full glass-card rounded-2xl p-5 sm:p-7 border-l-4 border-l-gold-500 border-gold-400/30 text-left shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+            className="w-full glass-card rounded-2xl p-5 sm:p-7 border border-gold-400/30 text-center shadow-sm hover:shadow-md transition-all flex flex-col justify-between items-center"
           >
-            <div>
+            <div className="flex flex-col items-center w-full">
               {/* Name */}
-              <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold leading-tight mb-2.5 font-bold">
+              <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-gradient-gold leading-tight mb-2.5 font-bold text-center">
                 Ansheda
               </h3>
 
               {/* Role Badge */}
-              <div className="mb-3">
+              <div className="mb-3 flex justify-center">
                 <span className="inline-block px-3.5 py-1 bg-primary-800/95 border border-gold-400/40 rounded-full font-serif text-gold-600 text-xs sm:text-sm uppercase tracking-[0.2em] font-bold">
                   The Bride
                 </span>
               </div>
 
               {/* Parentage */}
-              <p className="font-serif italic text-cream-100 text-sm sm:text-base md:text-lg mb-4 font-medium leading-relaxed">
+              <p className="font-serif italic text-cream-100 text-sm sm:text-base md:text-lg mb-4 font-medium leading-relaxed text-center">
                 Daughter of Ibrahim
               </p>
             </div>
 
             {/* Residence Address */}
-            <div className="pt-3 border-t border-gold-400/20 flex items-start gap-2.5 text-cream-200 font-serif text-sm sm:text-base">
-              <MapPin size={18} className="text-gold-500 shrink-0 mt-0.5" />
+            <div className="w-full pt-3 border-t border-gold-400/20 flex items-center justify-center gap-2 text-cream-200 font-serif text-sm sm:text-base text-center">
+              <MapPin size={17} className="text-gold-500 shrink-0" />
               <div className="leading-snug">
                 <span className="font-semibold text-cream-100">Kalluparamban House</span>
                 <span className="text-gold-600/70 mx-1.5 font-sans">·</span>
